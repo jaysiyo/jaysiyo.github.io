@@ -5,8 +5,8 @@
         <img src="{{ "/assets/cover.png" | relative_url }}">
       </a>
       <ul>
-      <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
-      <li><a href="{{ site.baseurl }}/">Posts</a></li>
+      <li class="{% if page.url == '/about/' %}active{% endif %}"><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+      <li class="{% if page.url != '/about/' %}active{% endif %}"><a href="{{ site.baseurl }}/">Posts</a></li>
       </ul>
     </div>
   </nav>

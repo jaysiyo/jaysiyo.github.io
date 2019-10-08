@@ -21,18 +21,9 @@ footer,
     margin: 1rem auto;
     position: relative;
     text-align: center;
-  }
 
-  &-title {
-    @include transition(all .2s ease-out);
-    color: #06F451;
-    display: inline-block;
-    margin: 0;
-    padding-right: .2rem;
-
-    &:hover,
-    &:focus {
-      opacity: .6;
+    .logo img {
+      width: 78px;
     }
   }
 

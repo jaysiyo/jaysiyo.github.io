@@ -71,6 +71,18 @@ footer,
   }
 }
 
+@media (max-width: 600px) {
+  .nav {
+    .logo img {
+      width: 58px;
+      margin: 0;
+      display: inline-block;
+    }
+  }
+
+
+}
+
 footer {
   font-family: $serif-secondary;
   padding: 2rem 0;

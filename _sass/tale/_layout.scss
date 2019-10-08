@@ -32,6 +32,12 @@ footer,
     margin: 1rem 0 0;
     padding: 0;
     text-align: center;
+
+    .active a {
+      font-weight: bold;
+      padding-bottom: 17px;
+      border-bottom: 1px solid #555;
+    }
   }
   
   li {
@@ -40,12 +46,6 @@ footer,
     display: inline-block;
     opacity: .6;
     padding: 0 2rem 0 0;
-
-    .active a {
-      font-weight: bold;
-      padding-bottom: 17px;
-      border-bottom: 1px solid #555;
-    }
 
     &:last-child {
       padding-right: 0;
@@ -79,22 +79,20 @@ footer,
 
 @media (max-width: 600px) {
   .nav {
-
-    li {
+    ul {
       .active a {
         font-weight: bold;
         padding-bottom: 17px;
         border-bottom: 1px solid #555;
       }
-  }
+    }
+
     .logo img {
       width: 58px;
       margin: 0;
       display: inline-block;
     }
   }
-
-
 }
 
 footer {

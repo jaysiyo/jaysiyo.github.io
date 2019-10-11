@@ -11,6 +11,11 @@
     font-weight: bold;
   }
 
+  .page-number {
+    color: $default-tint;
+    margin-left: 13px;
+  }
+
   .top {
     @include transition(all .3s ease-out);
     color: $default-color;

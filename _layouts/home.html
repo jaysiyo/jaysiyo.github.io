@@ -17,12 +17,25 @@ layout: default
       {% endfor %}
     </div>
 
+    
     <div class="pagination">
+      {% if paginator.total_posts %}
       {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
       {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+      <span class="active page-number">{{ page }}</span>
+      {% elsif page == 1 %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-number">{{ page }}</a>
+      {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-number">{{ page }}</a>
+      {% endif %}
+      {% endfor %}
+
       {% if paginator.next_page %}
       <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
       {% endif %}
-      <span class="active">{{ paginator.page }}</span>
+      {% endif %}
     </div>
